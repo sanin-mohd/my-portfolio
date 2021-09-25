@@ -1235,7 +1235,7 @@
 
 																<!-- form -->
 
-																<form   action="" id="submit-form">
+																<form  id="submit-form" action="" >
 																	<!-- class="wpcf7-form init"
 																	novalidate="novalidate" data-status="init"> 
 																	<div style="display: none;">
@@ -1388,6 +1388,25 @@
 	<script id='contact-form-7-js-extra'>
 		var wpcf7 = { "api": { "root": "https:\/\/jthemes.net\/themes\/wp\/bolby\/wp-json\/", "namespace": "contact-form-7\/v1" } };
 	</script>
+	<script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbwBaoNTlUKswLJH4uIwptkGktEzLt_de9I3UCINuYBQ7dkzJ1IDiWbEsbXc9-9I_2vN/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
 	<script src='wp-content/plugins/contact-form-7/includes/js/index7661.js?ver=5.4.2' id='contact-form-7-js'></script>
 	<script src='wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.mine1da.js?ver=2.7.0-wc.5.6.0'
 		id='jquery-blockui-js'></script>
