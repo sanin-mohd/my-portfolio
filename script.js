@@ -25,7 +25,7 @@ $(document).ready(function(){
         if (isvalidate) {
         e.preventDefault()
         $.ajax({
-            url: "https://script.google.com/macros/s/AKfycbwBaoNTlUKswLJH4uIwptkGktEzLt_de9I3UCINuYBQ7dkzJ1IDiWbEsbXc9-9I_2vN/exec",
+            url: "https://script.google.com/macros/s/AKfycbyGDcHoxunKLZiTdWztb0R0jSi1dC9ajr7rRpaNXFYjA5G0XUzAb3toMEV5e6JOr4qi/exec",
             data: $("#submit-form").serialize(),
             method: "post",
             success: function (response) {
