@@ -1,25 +1,25 @@
 $(document).ready(function(){
-    // $("#submit-form").validate({
-    //     rules:{
-    //         name:{
-    //             required:true,
-    //             minlength:4,
-    //             maxlength:20
-    //         },
-    //         email:{ 
-    //             required:true,
-    //             email:true
-    //         },
-    //         message:{
-    //             required:true
-    //         },
-    //         subject:{
-    //             required:true,
-    //             minlength:5
-    //         }
-    //     },
+    $("#submit-form").validate({
+        rules:{
+            name:{
+                required:true,
+                minlength:4,
+                maxlength:20
+            },
+            email:{ 
+                required:true,
+                email:true
+            },
+            message:{
+                required:true
+            },
+            subject:{
+                required:true,
+                minlength:5
+            }
+        },
         
-    // }),
+    }),
     $("#submit-form").submit((e) => {
         var isvalidate = $("#submit-form")[0].checkValidity();
         if (isvalidate) {
